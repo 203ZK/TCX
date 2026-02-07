@@ -36,7 +36,7 @@ For the following proofs, fill in the blanks with the corresponding [[Unit 1#All
 #### Sub-part 1
 
 >[!note] Proof: $\forall x, y \in \mathbb{N} \ \big[\left((x = 0) \lor (y = 0)\right) \to (xy = 0) \big]$
->1. Let $x, y \in \mathbb{N}$ be arbitrarily chosen.
+>1. ==Let $x, y \in \mathbb{N}$ be arbitrarily chosen.==
 >2. Suppose $(x = 0) \lor (y = 0)$.
 >3. Case 1: Assume $x = 0$.
 >		1. $xy = 0 \cdot y = 0$. **\[ (a) Rule of deduction: _ _ _ _ _ _ _ _ _ _ ]**
