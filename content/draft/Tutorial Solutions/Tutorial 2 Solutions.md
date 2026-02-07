@@ -37,7 +37,7 @@ For the following proofs, fill in the blanks with the corresponding [[Unit 1#All
 >1. Let $x, y \in \mathbb{N}$ be arbitrarily chosen.
 >2. Suppose $(x = 0) \lor (y = 0)$.
 >3. Case 1: Assume $x = 0$.
->		1. $xy = 0 \cdot y = 0$. **\[ (a) Rule of deduction: Basic algebra ]**
+>		1. $xy = 0 \cdot y = 0$. ==**\[ (a) Rule of deduction: Basic algebra ]**==
 >4. Case 2: Assume $y = 0$.
 >		1. $xy = x \cdot 0 = 0$. **\[ (b) Rule of deduction: Basic algebra ]**
 >5. In all cases, we have $xy = 0$.  **\[ (c) Rule of deduction: Proof by cases on lines 2, 3.1, 4.1 ]**
