@@ -206,6 +206,28 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
         })
       }
 
+      // src = src.replace(calloutLineRegex, (value) => {
+      //   // force newline after title of callout
+      //   return value + "\n> "
+      // })
+
+      if (opts.highlight) {
+        if (src instanceof Buffer) {
+          src = src.toString()
+        }
+
+        src = src.replace([
+          highlightRegex,
+          (_value: string, ...capture: string[]) => {
+            const [inner] = capture
+            return {
+              type: "html",
+              value: `<span class="text-highlight">${inner}</span>`,
+            }
+          },
+        ])
+      }
+
       return src
     },
     markdownPlugins(_ctx) {
