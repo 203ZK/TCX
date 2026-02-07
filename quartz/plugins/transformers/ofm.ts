@@ -116,7 +116,7 @@ export const tableRegex = new RegExp(/^\|([^\n])+\|\n(\|)( ?:?-{3,}:? ?\|)+\n(\|
 // matches any wikilink, only used for escaping wikilinks inside tables
 export const tableWikilinkRegex = new RegExp(/(!?\[\[[^\]]*?\]\])/g)
 
-const highlightRegex = new RegExp(/==([^=]+)==/g)
+const highlightRegex = new RegExp(/(?<!<)==(?!>)(.+?)(?<!<)==(?!>)/gms)
 const commentRegex = new RegExp(/%%[\s\S]*?%%/g)
 // from https://github.com/escwxyz/remark-obsidian-callout/blob/main/src/index.ts
 const calloutRegex = new RegExp(/^\[\!([\w-]+)\|?(.+?)?\]([+-]?)/)
@@ -206,26 +206,9 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
         })
       }
 
-      // src = src.replace(calloutLineRegex, (value) => {
-      //   // force newline after title of callout
-      //   return value + "\n> "
-      // })
-
+      // pre-transform highlights
       if (opts.highlight) {
-        if (src instanceof Buffer) {
-          src = src.toString()
-        }
-
-        src = src.replace([
-          highlightRegex,
-          (_value: string, ...capture: string[]) => {
-            const [inner] = capture
-            return {
-              type: "html",
-              value: `<span class="text-highlight">${inner}</span>`,
-            }
-          },
-        ])
+        src = src.replace(highlightRegex, `<span class="text-highlight">$1</span>`)
       }
 
       return src
