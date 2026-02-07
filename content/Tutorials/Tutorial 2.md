@@ -31,7 +31,7 @@ That said, **we encourage you to try all the questions**. This way, when you com
 ---
 # Question 1 \[Graded for Participation]:
 
-For the following proofs, fill in the blanks with the corresponding [[Unit 1#Allowable Rules of Deductions/Inferences|rule of deduction]] used, quoting the appropriate line numbers where necessary.
+For the following proofs, ==fill in the blanks with the corresponding== [[Unit 1#Allowable Rules of Deductions/Inferences|rule of deduction]] used, quoting the appropriate line numbers where necessary.
 
 #### Sub-part 1
 
