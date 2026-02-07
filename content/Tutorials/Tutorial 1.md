@@ -65,7 +65,7 @@ Draw two truth tables to verify that:
 
 1. $\neg (p \to q)$ is logically equivalent to $p \land \neg q$.
 
-|   $p$   |   $q$   | $p \to q$ | $\neg(p \to q)$ | $\neg q$ | $p \land \neg q$ |
+|   $p$   |   ==$q$==   | $p \to q$ | $\neg(p \to q)$ | $\neg q$ | $p \land \neg q$ |
 | :-----: | :-----: | :-------: | :-------------: | :------: | :--------------: |
 | $true$  | $true$  |           |                 |          |                  |
 | $true$  | $false$ |           |                 |          |                  |
