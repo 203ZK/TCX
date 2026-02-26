@@ -296,8 +296,8 @@ Let's start with a motivating example. You might have seen this snippet of code 
 
 ```python
 def binary_search(arr, left, right, key):
-	if left + 1 == right:
-		return arr[left] == key
+	if left + 1 === right:
+		return arr[left] === key
 
 	mid = (right + left) // 2
 	if arr[mid] <= key:
